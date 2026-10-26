@@ -181,7 +181,7 @@ strong { font-weight: 600; color: var(--text); }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
 .hero-meta { display: flex; gap: 40px; margin-top: 52px; padding-top: 28px; border-top: 1px solid var(--border); }
 .hero-meta .num { display: block; font-family: var(--display); font-size: 2.1rem; font-weight: 600; line-height: 1; }
-.hero-meta .num::after { content: "+"; color: var(--accent); }
+.hero-meta .num.plus::after { content: "+"; color: var(--accent); }
 .hero-meta .lbl { font-size: 0.82rem; color: var(--muted); }
 
 .hero-visual { position: relative; display: flex; flex-direction: column; align-items: center; }
@@ -534,3 +534,31 @@ strong { font-weight: 600; color: var(--text); }
   .reveal { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
 }
+
+/* v4 additions */
+.lang-btn { font: 600 12px var(--mono); letter-spacing: .04em; }
+.lang-btn:hover { transform: none; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form-status { text-align: center; min-height: 1.5em; font-size: .95rem; }
+.form-status.ok { color: var(--accent); }
+.form-status.err { color: #e5484d; }
+.contact-form .btn[disabled] { opacity: .6; cursor: progress; }
+.cv-alt { text-align: center; margin-top: 10px; font-size: .9rem; }
+.cv-alt a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.cv-alt a:hover { color: var(--accent); }
+
+/* Architecture diagram (featured project) */
+.project-visual .diagram { width: 100%; margin: 0; padding: 26px 26px 18px; align-self: center; }
+.diagram svg { width: 100%; height: auto; display: block; }
+.d-box rect { fill: var(--bg); stroke: var(--muted); stroke-width: 1; opacity: .95; }
+.d-box.accent rect { fill: color-mix(in srgb, var(--accent) 14%, var(--bg)); stroke: var(--accent); }
+.d-box text { font: 500 13.5px var(--mono); fill: var(--text); stroke: none; text-anchor: middle; text-rendering: geometricPrecision; }
+.d-line path { fill: none; stroke: var(--muted); stroke-width: 1; opacity: .8; }
+.diagram figcaption { font-size: .82rem; color: var(--muted); margin-top: 14px; text-align: left; }
+.project-visual.v1 { height: auto; }
+@media (max-width: 760px) { .project-visual .diagram { padding: 18px 10px 14px; } .diagram figcaption { padding: 0 6px; } }
+
+.diagram svg { stroke: none; }
+.d-box rect, .d-line path { stroke-linecap: butt; }
+.chip svg { width: 15px; height: 15px; color: var(--accent); stroke-width: 1.8; }
+.mini-ico svg { width: 22px; height: 22px; color: var(--accent); stroke-width: 1.7; }
